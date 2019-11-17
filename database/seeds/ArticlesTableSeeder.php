@@ -18,7 +18,7 @@ class ArticlesTableSeeder extends Seeder
         $faker = Faker\Factory::create();
     	for ($i = 0; $i < 50; $i++) {
             DB::table('articles')->insert([ //,
-                'title' => $faker->text($maxNbChars = 100),
+                'title' => $faker->text($maxNbChars = 50),
                 'thumbnail' => $faker->imageUrl($width = 640, $height = 480),
                 'description' => $faker->text($maxNbChars = 500),
         		'content' => $faker->text($maxNbChars = 1000),

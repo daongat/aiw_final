@@ -3,6 +3,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="icon" href="img/favicon.png" type="image/png">
         <title>Force Magazine</title>
         <!-- Bootstrap CSS -->
@@ -17,6 +18,7 @@
         <!-- main css -->
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+        @yield('head')
     </head>
     <body>
         
@@ -58,12 +60,12 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 								<ul class="nav navbar-nav menu_nav">
-									<li class="nav-item active"><a class="nav-link" href="{{url('/')}}">Home</a></li> 
-									<li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Health</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Economic</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Policy</a></li>
+									<li class="nav-item active"><a class="nav-link" href="{{url('/api')}}">Home</a></li> 
+									<li class="nav-item"><a class="nav-link" href="{{route('articles.category', 1)}}">Sport</a></li>
+									<li class="nav-item"><a class="nav-link" href="{{route('articles.category', 2)}}">Health</a></li>
+									<li class="nav-item"><a class="nav-link" href="{{route('articles.category', 3)}}">Entertainment</a></li>
+									<li class="nav-item"><a class="nav-link" href="{{route('articles.category', 4)}}">Economic</a></li>
+									<li class="nav-item"><a class="nav-link" href="{{route('articles.category', 5)}}">Policy</a></li>
 
 								</ul>
 								<ul class="nav navbar-nav navbar-right ml-auto">
@@ -172,7 +174,7 @@
                             <div class="m_news">
                             	<div class="media">
                             		<div class="d-flex">
-                            			<img src="{{asset('img/product/')}}product-13.jpg" alt="">
+                            			<img src="{{asset('img/product/product-13.jpg')}}" alt="">
                             		</div>
                             		<div class="media-body">
                             			<a href="#"><h4>Converter Ipod Video Taking Portable Video Viewing To A Whole Level</h4></a>
@@ -235,7 +237,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
         <script src="{{asset('js/mail-script.js')}}"></script>
         <script src="{{asset('js/theme.js')}}"></script>
-
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
         <script type="text/javascript">
         	var fullDate = new Date();
 			var twoDigitMonth = fullDate.getMonth()+"";if(twoDigitMonth.length==1)	twoDigitMonth="0" +twoDigitMonth;
