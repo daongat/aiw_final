@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="main_blog_details">
-          <img class="img-fluid" src="{{$article->thumbnail}}" alt="">
+          <img class="img-fluid" src="{{asset('')}}img/post/{{$article->thumbnail}}" alt="">
           <a href="#"><h4>{{$article->title}}</h4></a>
           <div class="user_details">
             <div class="float-left">
@@ -133,7 +133,7 @@
             </div>
             @foreach($popular_posts as $popular_post)
             <div class="choice_item">
-              <img class="img-fluid" src="{{$popular_post->thumbnail}}" alt="">
+              <img class="img-fluid" src="{{asset('')}}img/post/{{$popular_post->thumbnail}}" alt="">
               <div class="choice_text">
                 <div class="date">
                   <a class="gad_btn" href="#">{{$popular_post->category}}</a>

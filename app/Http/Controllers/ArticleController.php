@@ -145,8 +145,8 @@ class ArticleController extends Controller
         }
         $tags = ArticleTag::where('article_id', $article->id)->get();
         foreach ($tags as $tag) {
-            $tag_name = Tag::where('id', $tag->id)->select('name')->first();
-            $tag['name'] = $tag_name->name;
+            $tag_name = Tag::where('id', $tag->tag_id)->select('name')->first();
+            $tag['name'] = $tag_name['name'];
         }
         return view('detail', [
                             'article'           =>  $article,

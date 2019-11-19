@@ -26,7 +26,7 @@
 					@foreach($current_posts as $current_post)
 						<div class="media">
 							<div class="d-flex">
-								<img class="img-fluid" src="{{$current_post->thumbnail}}" alt="" style="width: 400px; height: 250px;">
+								<img class="img-fluid" src="img/post/{{$current_post->thumbnail}}" alt="" style="width: 400px; height: 250px;">
 							</div>
 							<div class="media-body">
 								<div class="choice_text">
@@ -52,7 +52,7 @@
 						@foreach($posts as $post)
 						<div class="col-sm-6">
 							<div class="choice_item">
-								<img class="img-fluid" src="{{$post->thumbnail}}" alt="">
+								<img class="img-fluid" src="img/post/{{$post->thumbnail}}" alt="">
 								<div class="choice_text">
 									<div class="date">
 										<a class="gad_btn" href="#">{{$post->category}}</a>
@@ -78,7 +78,7 @@
 						</div>
 						@foreach($popular_posts as $popular_post)
 						<div class="choice_item">
-							<img class="img-fluid" src="{{$popular_post->thumbnail}}" alt="">
+							<img class="img-fluid" src="img/post/{{$popular_post->thumbnail}}" alt="">
 							<div class="choice_text">
 								<div class="date">
 									<a class="gad_btn" href="#">{{$popular_post->category}}</a>
