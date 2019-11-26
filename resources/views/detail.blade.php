@@ -105,7 +105,8 @@
                 </div>
                 <button type="submit" class="primary-btn submit_btn">Post Comment</button>
             </form>
-            <form id="editFeedback" method="POST" action="">
+            <form id="editFeedback" action="">
+              {{ method_field('PUT') }}
               <input type="hidden" name="" id="edit-id" value="">
                 <div class="form-group form-inline">
                   <div class="form-group col-lg-6 col-md-6 name">
@@ -231,7 +232,7 @@ $(document).on('submit', '#editFeedback', function(e){
   e.preventDefault();
   var id = $('#edit-id').val();
   $.ajax({
-    type: 'post',
+    type: 'put',
     url: "http://localhost/aiw_final/public/api/articles/update/"+id,
     data: {
       reader_name: $('#edit-name').val(),

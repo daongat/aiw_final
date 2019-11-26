@@ -20,5 +20,5 @@ Route::get('/articles/{slug}/detail', 'ArticleController@getDetail')->name('arti
 Route::post('/articles/{id}/addFeedback', 'FeedbackController@addFeedback')->name('articles.addFeedback');
 Route::delete('/articles/delete/{id}', 'FeedbackController@deleteFeedback')->name('articles.deleteFeedback');
 Route::get('/articles/edit/{id}', 'FeedbackController@edit')->name('feedback.edit');
-Route::post('/articles/update/{feedback_id}', 'FeedbackController@update')->name('feedback.update');
+Route::put('/articles/update/{feedback_id}', 'FeedbackController@update')->name('feedback.update');
 Route::get('/articles/tag/{id}', 'ArticleController@getTag')->name('articles.tag');
